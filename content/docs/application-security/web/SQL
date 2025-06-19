@@ -1,0 +1,47 @@
+# 🛡️ SQL Injection Exploitation & Defense Guide
+
+A complete cheat sheet for discovering, exploiting, and mitigating SQL Injection vulnerabilities in modern web applications.
+
+SQL Injection (SQLi) remains one of the most critical and commonly found vulnerabilities in web applications. It allows attackers to interfere with the queries that an application makes to its database — potentially leading to authentication bypass, data leakage, or even full server compromise.
+
+This guide is designed as a hands-on resource to help pentesters, bug bounty hunters, and developers understand the depth of SQLi vectors and how to mitigate them effectively.
+
+## 📍 Injection Points
+
+These are common places where SQL Injection vulnerabilities can occur. Always test any input that gets reflected or processed server-side.
+
+- 🔗 URL Parameters (`/user?id=1`)
+- 🧾 Form Inputs (e.g., login, search)
+- 📑 Headers (`X-Forwarded-For`, `User-Agent`)
+- 🍪 Cookies
+- 🕵️‍♂️ Hidden Fields in Forms
+- 📱 Mobile APIs / JavaScript-based APIs
+- 🔄 HTTP Methods like PUT, PATCH, DELETE
+- 📦 Batch or Bulk API Requests
+
+---
+
+## 🔍 Testing Parameters & Scenarios
+
+| Scenario        | Description                                            |
+|-----------------|--------------------------------------------------------|
+| Login Bypass    | Injecting `' OR 1=1--` to bypass authentication        |
+| Search Filter   | Testing filters or search bars for injection           |
+| ID Lookup       | Exploiting ID-based endpoints like `/item?id=5`        |
+| Blind SQLi      | No error/output, rely on time/boolean-based payloads   |
+| Error-based SQLi| Observe SQL errors in the response                     |
+| OOB Injection   | Trigger out-of-band data leaks using Burp Collaborator |
+
+## Complete mindmap can be found here : 
+
+<iframe src="mindmap.html" width="100%" height="600px" frameborder="0"></iframe>
+
+**Do not forget to download the interactive HTML file from here**
+
+[Link to download the HTML file]
+
+
+
+
+
+---
